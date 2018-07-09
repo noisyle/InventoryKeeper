@@ -54,6 +54,7 @@ public class InventoryKeeper {
     @Listener
     public void onInit(GamePreInitializationEvent event) throws IOException, ObjectMappingException {
         loadConfig();
+        Sponge.getEventManager().registerListeners(this, this);
         logger.info("InventoryKeeper loaded.");
 
     }
