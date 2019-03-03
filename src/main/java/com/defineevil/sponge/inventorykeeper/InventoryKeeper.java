@@ -54,7 +54,7 @@ public class InventoryKeeper {
     @Listener
     public void onInit(GamePreInitializationEvent event) throws IOException, ObjectMappingException {
         loadConfig();
-        Sponge.getEventManager().registerListeners(this, this);
+//        Sponge.getEventManager().registerListeners(this, this);
         logger.info("InventoryKeeper loaded.");
 
     }
@@ -195,7 +195,7 @@ public class InventoryKeeper {
         this.config = node.getValue(TypeToken.of(Config.class));
         if (config == null) {
             config = new Config();
-            node.setValue(config);
+            node.setValue(TypeToken.of(Config.class), config);
             configManager.save(node);
         }
     }

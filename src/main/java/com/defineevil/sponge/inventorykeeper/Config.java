@@ -27,7 +27,7 @@ public class Config {
 
     @Setting(comment = "The message that gets sent to the died player.")
     public TextTemplate deathMessage = TextTemplate.of(
-            Text.of(TextColors.AQUA, "[DeathPenalty]"), " You lost ",
+            Text.of(TextColors.AQUA, "[InventoryKeeper]"), " You lost ",
             TextTemplate.arg("moneyLoss").optional(true).defaultValue(Text.of("[Not provided]")),
             "$, ",
             TextTemplate.arg("xpLoss").optional(true).defaultValue(Text.of("[Not provided]")),
